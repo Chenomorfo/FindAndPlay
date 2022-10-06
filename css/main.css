@@ -1,0 +1,67 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 10% 90%;
+    grid-template-areas: "NavBar NavBar"
+                         "Main Chat";
+}
+
+.Box{
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 5px solid black;
+}
+
+#Main{grid-area: Main;
+display: block;
+}
+#NavBar{grid-area: NavBar;
+}
+
+#NavBar ul{
+  list-style-type: none;
+  display: flex;
+  
+}
+
+#NavBar ul li{
+  font-size: 1.6rem;
+  margin: 12px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: aqua;
+  user-select: none;
+  transition: background-color 0.5s;
+}
+
+#NavBar ul li:hover{
+  background-color: black;
+  color: white;
+}
+
+#Chat{grid-area: Chat;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#Chat div{
+  display: inline-block;
+}
+
+#Chat div p{
+  margin-left: 5px;
+  text-align: left;
+ font-size: 1.2rem;
+}
